@@ -1,0 +1,628 @@
+@import url("https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple");
+/* Global Variable  */
+:root{
+    --main: rgb(255, 183, 0);
+    --black: #000;
+    --white: #fff;
+}
+*::selection{
+    color: var(--white) !important;
+    background: var(--main);
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    outline: none;
+    transition: 0.4s;
+    box-sizing: border-box;
+    font-family: 'Georgia', sans-serif;
+} 
+.content{
+    text-align: center;
+    margin: 50px auto;
+}
+.content h6{
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--main);
+}
+.content h6 span{
+    font-size: 1.5em;
+    font-family: 'Sofia', sans-serif ;
+}
+.content h6::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 340px;
+    margin-left: 490px;
+    background-color: #021541;
+}
+html::-webkit-scrollbar{
+    width: 10px;
+}
+html::-webkit-scrollbar-thumb{
+    /* background-color: var(--main); */
+    background: rgb(214, 177, 10);
+}
+html::-webkit-scrollbar-track{
+    background: #021541;
+}
+/* Navbar section starting here */
+.navbar{
+    /* padding: 20px; */
+    display: flex;
+    justify-content: space-between;
+    background-color: #021541;
+}
+.navbar-brand{
+    font-weight: 500;
+    font-size: 1.5em;
+    /* font-family: 'Sofia', sans-serif ; */
+    padding: 0px 30px;
+    color: var(--white) !important;
+}
+.navbar-brand:hover{
+    color: var(--main) !important;
+}
+.navbar-brand span{
+    font-size: 1.8em;
+    font-family: 'Sofia', sans-serif ;
+    color: var(--main);
+}
+.navbar-nav{
+    padding: 0px 20px;
+    margin-top: 20px;
+}
+.nav-link{
+    margin: 0px 10px;
+    font-weight: 500;
+    color: var(--white);
+}
+.navbar-nav .active{
+    color: var(--main) !important;
+}
+.nav-link:hover{
+    color: var(--main);
+}
+.nav-link::after{
+    content: "";
+    height: 1px;
+    width: 0px;
+    background: var(--main);
+    position: absolute;
+    display: block;
+    transition: 0.4s;
+}
+.nav-link:hover::after{
+    width: 40px;
+} 
+/* Navbar section Ends here */
+
+/* Header Section Starts here */
+.header{ 
+    margin: 0; 
+    padding: 0; 
+    position: relative;
+}
+.header .img-parent{
+    position: relative;
+}
+.header img{
+    height: 100vh;
+    width: 100%;
+    filter: saturate(1);
+}
+.header .img-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--black);
+    z-index: 1;
+    opacity: 0.3;
+} 
+.header .carousel-control-prev , .header .carousel-control-next{
+    z-index: 2;
+}
+.header .carousel-item{
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    /* transition-delay: 0s; */
+}
+.header .img-content{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: var(--white);
+    background-color: #021541;
+    padding: 20px;
+    border-radius: 20px;
+    opacity: 0;
+}
+.header .img-content:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.header .img-content h6{
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--main);
+}
+.header .img-content p{
+    font-size: 13px;
+    font-weight: 600;
+}
+.header .img-content .btn{
+    border: 1px solid var(--white);
+    color: var(--white);
+    width: 150px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+.header .img-content .btn:hover{
+    letter-spacing: 0.5px;
+    font-size: 18px;
+    /* font-weight: 600; */
+    transition: 0.5s;
+    background: var(--main) !important;
+    color: var(--black) !important;
+}
+/* Header Section Ends here */
+
+/* About Us Section Starts here */
+.about{
+    margin: 100px auto;
+}
+.about h6{
+    font-size: 2em;
+    font-weight: bolder;
+    margin: 15px auto;
+    font-family: 'Sofia', sans-serif;
+    /* font-family: 'Georgia', sans-serif; */
+    color: var(--main) ;
+}
+.about h6 span{
+    font-size: 2.2em;
+    font-weight: 500;
+    font-family: 'Sofia', sans-serif;
+}
+.about img{
+    border-radius: 10px;
+    cursor: pointer;
+    height: 370px;
+    /* object-fit: cover; */
+}
+/* About Us Section Ends here */
+
+/* Popular Business Plan Section Starts here */
+.popular{
+    margin: 100px auto;
+}
+.popular .box{
+    box-shadow: 10px 10px 10px -10px rgba(0, 0, 0, 0.3),
+    inset 10px 10px 10px -8px rgba(0, 0, 0, 0.8); 
+    padding: 25px;
+    text-align: center;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+.popular .middle-box{
+    margin-top: 80px;
+}
+.popular .box:hover{
+    border-top-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    cursor: pointer;
+    color: darkblue;
+    background: var(--main);
+}
+.popular .box img{
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+}
+.popular .box h6{
+    font-weight: 600;
+    font-size: 22px;
+    margin: 10px auto;
+}
+.popular .box h6 span{
+    color: red;
+}
+/* Popular Business Plan Section Ends here */
+
+
+/*============== Services Page Starts here ==============*/
+
+/* Second Header Section Starts here */
+.second-header{
+    margin: 0px;
+    padding: 0;
+    position: relative;
+}
+.second-header .img-parent{
+    position: relative;
+}
+.second-header img{
+    height: 100vh;
+    width: 100%;
+    filter: saturate(1.5);
+}
+.second-header .img-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--black) !important;
+    opacity: 0.3;
+    z-index: 1;
+} 
+.second-header .img-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    color: var(--black) !important;
+    text-align: center;
+} 
+.second-header .img-content .box{
+    background-color: var(--white);
+    padding: 20px;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    cursor: pointer;
+}
+.second-header .img-content .box:hover{
+   background-color: darkgoldenrod;
+   border-top-left-radius: 0%;
+   border-bottom-right-radius: 0%;
+   border-top-right-radius: 20%;
+   border-bottom-left-radius: 20%;
+   cursor: pointer;
+
+}
+.second-header .img-content i{
+    font-size: 50px;
+    margin: 10px auto;
+    color: rgb(5, 141, 5);
+}
+.second-header .img-content h6{
+    font-size: 25px;
+    font-weight: bold;
+    color: #021541;
+}
+.second-header .img-content p{
+    font-weight: 600;
+}
+/* Second Header Section Ends here */
+
+/* Custom-Section Starts here */
+.custom-section{
+    margin: 100px auto;
+}
+.custom-section h6{
+    font-size: 2em;
+    font-weight: bold;
+    margin: 15px auto;
+    /* font-family: 'Sofia', sans-serif; */
+    font-family: 'Georgia', sans-serif;
+    color: #063196;
+}
+.custom-section h6 span{
+    font-size: 45px;
+    font-weight: 600;
+    font-family: 'Georgia', sans-serif;
+    color: var(--main);
+}
+.custom-section img{
+    border-radius: 10px;
+    cursor: pointer;
+    height: 370px;
+}
+/* Custom-Section Ends here */
+
+.youtube{
+    margin: 100px auto;
+    position: relative;
+}
+.youtube h6{
+    font-size: 2em;
+    font-weight: bold;
+    margin: 15px auto;
+    /* font-family: 'Sofia', sans-serif; */
+    font-family: 'Georgia', sans-serif;
+    color: #063196;
+}
+.youtube h6 span{
+    font-size: 45px;
+    font-weight: 600;
+    font-family: 'Georgia', sans-serif;
+    color: var(--main);
+}
+.youtube img{
+    border-radius: 10px;
+    /* height: 100%;
+    width: 100%; */
+    height: 370px;
+}
+.youtube .img-content{
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.youtube .col-sm-5{
+    position: relative;
+}
+.youtube .col-sm-5 i{
+    font-size: 100px;
+    color: red;
+}
+
+/* Testimonal Section Starts here */
+.testimonal{
+    margin: 100px auto;
+    /* margin-bottom: 200px; */
+}
+.testimonal .box{
+    box-shadow: 10px 10px 10px -10px rgba(0, 0, 0, 0.3),
+    inset 10px 10px 10px -10px rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    text-align: center;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    text-align: center;
+    cursor: pointer;
+}
+.testimonal .middle-box{
+    margin-top: 80px;
+}
+.testimonal .box:hover{
+    border-top-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    cursor: pointer;
+    color: darkblue;
+    background: var(--main);
+}
+.testimonal img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+.testimonal .box h6{
+    font-weight: 600;
+    font-size: 22px;
+    margin: 12px auto;
+}
+.testimonal .row{
+    margin: 100px auto;
+}
+/* Testimonal Section Ends here */
+
+/* Footer Section Starts here */
+footer{
+   background: #021541;
+   padding: 20px;
+   text-align: center;
+}
+footer a{
+    text-decoration: none;
+    color: var(--main);
+    font-weight: 600;
+}
+footer a span{
+    font-size: 2em;
+    font-family: 'Sofia', sans-serif ;
+}
+footer a:hover{
+    color: pink !important;
+    transition-delay: -2s;
+}
+/* Footer Section Ends here */
+/*============ Services Page Ends here ============= */
+
+/*============ Planes page Starts here =============*/
+
+.plane-page .plane-header{
+    position: relative;
+    margin-bottom: 100px;
+}
+.plane-page .plane-header .img-plane img{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    filter: saturate(3);
+}
+.plane-page .plane-header .img-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--black);
+    z-index: 1;
+    opacity: 0.3;
+}
+.plane-page .plane-header .img-content{
+    position: absolute;
+    top: 60%;
+    left: 18%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    text-align: center;
+}
+.plane-page .plane-header .img-content h6 span{
+    font-size: 50px;
+    font-weight: 600;
+    color: #021541;
+}
+.plane-page .plane-plan .box{
+    box-shadow: 10px 10px 10px -0px rgba(0, 0, 0, 0.3),
+    inset 10px 10px 10px -8px rgba(0, 0, 0, 0.8), 
+    inset -10px -10px 10px -8px rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.plane-page .plane-plan .box:hover{
+    border-top-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    cursor: pointer;
+    color: darkblue;
+    background: var(--main);
+}
+.plane-page .plane-plan img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+.plane-page .plane-plan h6{
+    font-weight: 600;
+    font-size: 25px;
+    margin: 10px auto;
+}
+.plane-page .plane-plan .middle-box{
+    margin: 50px auto;
+}
+.plane-page .plane-plan .middle-box1{
+    margin-top: 50px;
+    margin: 50px auto;
+}
+/*=========== Planes page Ends here =============*/
+
+/*=========== Blog Page Starts here =============*/
+.plane-page .plane-header .img-blog img{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    filter: saturate(1.5);
+}
+.plane-page .plane-header .img-content-blog{
+    position: absolute;
+    top: 62%;
+    left: 80%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    text-align: center;
+}
+.plane-page .plane-header .img-content-blog h6 span{
+    font-size: 40px;
+    font-weight: 600;
+    color: #f9e000;
+}
+.blog-main-section{
+    margin: 100px auto;
+}
+.blog-main-section .box{
+    box-shadow: 10px 10px 10px -0px rgba(0, 0, 0, 0.3),
+    inset 10px 10px 25px -5px rgba(241, 181, 2, 0.8), 
+    inset -10px -10px 25px -5px rgba(182, 170, 5, 0.8);
+    padding: 50px;
+    text-align: center;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.blog-main-section .box h6{
+    font-weight: bold;
+    font-size: 30px;
+    margin: 2px auto;
+    margin-bottom: 20px;
+}
+.blog-main-section .box span{
+    /* font-weight: bold; */
+    font-size: 10px;
+    margin: 2px auto;
+}
+.blog-main-section .box:hover{
+    border-top-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    cursor: pointer;
+    color: darkblue;
+    background: var(--main);
+}
+.blog-main-section .row-2{
+    /* justify-content: space-around; */
+    /* margin-top: 60px; */
+    margin: 50px auto;
+    margin-top: 50px;
+}
+.blog-main-section .row-1{
+    /* justify-content: space-around; */
+    /* margin-top: 60px; */
+    margin: 50px auto;
+}
+.blog-main-section h6 {
+    color: #021541;
+}
+/*=========== Blog Page Ends here =============*/
+
+/*=========== Contact Page Starts here ============*/
+.plane-page .plane-header .img-overlay-contact{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--black);
+    z-index: 1;
+    opacity: 0.7;    
+}
+.plane-page .plane-header h1{
+    /*z-index: 2; */
+    position: relative;
+    color: #fee500;
+    text-align: center;
+    font-weight: 600;
+    left: 10px;
+}
+.contact-form{
+    margin: 100px auto;  
+}
+.contact-form img{
+    filter: saturate(2);
+}
+.contact-form .offset-sm-2{
+    border: 2px soliod black;
+}
+.contact-form .btn{
+    width: 200px;
+    border: 1px solid black;
+    color: var(--main);
+    font-weight: bold;
+    margin: 5px auto;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.contact-form .btn:hover{
+    background-color: var(--main);
+    color: rgb(16, 4, 80) !important;
+    letter-spacing: 2px;
+}
+/*=========== Contact Page Ends here ============*/
+
+
+
+ 
